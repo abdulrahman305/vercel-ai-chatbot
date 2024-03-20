@@ -26,7 +26,6 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
           restore-keys:  ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
           with: ${{ matrix.node-version }}
-      - uses: actions/setup@v3
       - run: npm install
       - run: npm install supabase
       - run: npm install vercel
